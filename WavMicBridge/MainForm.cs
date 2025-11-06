@@ -686,28 +686,24 @@ namespace WavMicBridge
         {
             if (isKeyDown) return;
 
-            bool ctrl = _pressed.Contains(Keys.LControlKey) || _pressed.Contains(Keys.RControlKey) || _pressed.Contains(Keys.ControlKey);
-            bool alt  = _pressed.Contains(Keys.LMenu) || _pressed.Contains(Keys.RMenu) || _pressed.Contains(Keys.Menu);
-            bool wKey = _pressed.Contains(Keys.W);
-
-            if (!(ctrl && alt && wKey)) return;
-
             bool shift = _pressed.Contains(Keys.LShiftKey) || _pressed.Contains(Keys.RShiftKey) || _pressed.Contains(Keys.ShiftKey);
             int slot = KeyToSlot(key, out bool fromNumpad);
             if (slot == -1) return;
+
+            if (!fromNumpad) return;
 
             var now = DateTime.UtcNow;
             if (slot == _lastTriggerSlot && (now - _lastTriggerAt).TotalMilliseconds < 250) return;
             _lastTriggerSlot = slot;
             _lastTriggerAt = now;
 
-            LOGGER.Info($"热键触发：Ctrl+Alt+W+{slot}（Shift={shift}，Pad={fromNumpad}）");
+            LOGGER.Info($"热键触发：小键盘 {slot}（Shift={shift}）");
 
             if (IsHandleCreated)
             {
                 BeginInvoke(new Action(() =>
                 {
-                    TriggerSlot(slot, forceRebind: shift, fromNumpad: fromNumpad);
+                    TriggerSlot(slot, forceRebind: shift, fromNumpad: true);
                 }));
             }
         }

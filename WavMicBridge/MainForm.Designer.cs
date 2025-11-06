@@ -223,8 +223,8 @@ namespace WavMicBridge
             // ===== 声音库分组 =====
             this.grpSoundBank.Location = new System.Drawing.Point(20, 280);
             this.grpSoundBank.Size = new System.Drawing.Size(770, 250);
-            this.grpSoundBank.Text = "声音库（Ctrl + Alt + W + 1..9）";
-
+            this.grpSoundBank.Text = "声音库（小键盘 1..9）";
+            
             // lvSoundBank
             this.lvSoundBank.Location = new System.Drawing.Point(20, 25);
             this.lvSoundBank.Size = new System.Drawing.Size(730, 180);
@@ -265,7 +265,7 @@ namespace WavMicBridge
             // 热键提示
             this.lblHotkeyHint.AutoSize = true;
             this.lblHotkeyHint.Location = new System.Drawing.Point(20, 215);
-            this.lblHotkeyHint.Text = "提示：首按槽位热键会弹窗绑定 WAV；按住 Shift 使用热键可强制重绑。双击列表项 = 播放。";
+            this.lblHotkeyHint.Text = "提示：首按槽位热键会弹窗绑定 WAV。 双击列表项 = 播放。";
 
             this.grpSoundBank.Controls.Add(this.lvSoundBank);
             this.grpSoundBank.Controls.Add(this.lblHotkeyHint);
