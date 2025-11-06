@@ -697,7 +697,7 @@ namespace WavMicBridge
             _lastTriggerSlot = slot;
             _lastTriggerAt = now;
 
-            LOGGER.Info($"热键触发：小键盘 {slot}（Shift={shift}）");
+            LOGGER.Info($"热键触发：小键盘 {slot}（Shift={shift}）"); 
 
             if (IsHandleCreated)
             {

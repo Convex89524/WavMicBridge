@@ -268,7 +268,7 @@ namespace WavMicBridge
             this.lblHotkeyHint.Text = "提示：首按槽位热键会弹窗绑定 WAV。 双击列表项 = 播放。";
 
             this.grpSoundBank.Controls.Add(this.lvSoundBank);
-            this.grpSoundBank.Controls.Add(this.lblHotkeyHint);
+            this.grpSoundBank.Controls.Add(this.lblHotkeyHint); 
 
             // ==== 托盘：菜单与图标 ====
             this.trayMiShowHide.Text = "打开主窗口";
