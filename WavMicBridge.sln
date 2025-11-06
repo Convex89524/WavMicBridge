@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WavMicBridge", "WavMicBridge\WavMicBridge.csproj", "{DAA0E595-6FB2-4E12-B736-A536375E933F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMLS.CLogger", "..\..\.vs_lib\CLogger\CMLS.CLogger.csproj", "{A466F5BD-3E4E-4E0B-B622-2596BE1F8E95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMLS.CLogger", "CLogger\CMLS.CLogger.csproj", "{A466F5BD-3E4E-4E0B-B622-2596BE1F8E95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
