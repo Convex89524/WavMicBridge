@@ -25,6 +25,7 @@ namespace WavMicBridge
         {
             var composite = new CompositeAppender();
             composite.AddAppender(new ConsoleAppender());
+            composite.AddAppender(new FileAppender("logs"));
             LogManager.Configure(LogLevel.DEBUG, composite);
             Clogger.SetGlobalLevel(LogLevel.DEBUG);
         }
@@ -32,6 +33,8 @@ namespace WavMicBridge
         [STAThread]
         static void Main()
         {
+            init();
+            
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
         }

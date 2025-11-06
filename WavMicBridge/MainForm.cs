@@ -126,7 +126,7 @@ namespace WavMicBridge
             _trayIcon = new NotifyIcon
             {
                 Text = "WavMicBridge",
-                Icon = SystemIcons.Application,   // 可替换为自定义 .ico
+                Icon = SystemIcons.Application,
                 Visible = true,
                 ContextMenuStrip = _trayMenu
             };
